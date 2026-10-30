@@ -1,0 +1,34 @@
+# RDRS configuration - all settings live here
+watch_folders:
+  - ./data/sandbox
+
+simulation_mode: true          # never kill processes; only log what would happen
+database_path: ./data/rdrs.db
+quarantine_dir: ./data/quarantine
+
+entropy:
+  sample_bytes: 65536          # read first 64 KB only
+  high_threshold: 7.5          # above this looks encrypted/random
+
+detection:
+  window_seconds: 60
+  files_modified_per_minute: 20
+  renames_threshold: 15
+  extension_changes_threshold: 15
+  avg_entropy_threshold: 7.0
+
+weights:
+  rapid_encryption: 40
+  mass_rename: 30
+  high_entropy: 25
+  cpu_spike: 15
+  unknown_program: 10
+
+levels:
+  warning: 40
+  critical: 70
+
+logging:
+  dir: ./logs
+  rotation: "5 MB"
+  retention: "10 days"

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+logs/
+data/*.db
+data/quarantine/
+data/sandbox/
+.coverage

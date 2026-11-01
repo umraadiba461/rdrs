@@ -85,6 +85,30 @@ class Database:
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?)", data)
             self._conn.commit()
 
+    def save_score(self, timestamp: str, score: int, level: str, signals: Iterable[str]) -> None:
+        with self._lock:
+            self._conn.execute(
+                "INSERT INTO scores (timestamp, score, level, signals) VALUES (?, ?, ?, ?)",
+                (timestamp, score, level, ",".join(sorted(signals))))
+            self._conn.commit()
+
+    def save_alert(self, timestamp: str, level: str, score: int, message: str) -> None:
+        with self._lock:
+            self._conn.execute(
+                "INSERT INTO alerts (timestamp, level, score, message) VALUES (?, ?, ?, ?)",
+                (timestamp, level, score, message))
+            self._conn.commit()
+
+    def save_incident(self, timestamp: str, score: int, suspect: str,
+                      affected_files: str, status: str) -> int:
+        """Insert an incident and return its id."""
+        with self._lock:
+            cur = self._conn.execute(
+                "INSERT INTO incidents (timestamp, score, suspect_process, affected_files, status) "
+                "VALUES (?, ?, ?, ?, ?)", (timestamp, score, suspect, affected_files, status))
+            self._conn.commit()
+            return int(cur.lastrowid)
+
     def count(self, table: str) -> int:
         if table not in {"events", "processes", "scores", "alerts", "incidents"}:
             raise ValueError(f"Unknown table: {table}")

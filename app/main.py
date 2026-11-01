@@ -10,6 +10,10 @@ from app.core.logger import get_logger, setup_logging
 from app.core.models import FileEvent
 from app.database.db import Database
 from app.detectors.detection_engine import DetectionEngine
+from app.detectors.response import ResponseEngine
+from app.detectors.scoring import calculate_score, classify
+
+CPU_SPIKE_PERCENT = 80.0
 
 
 def main() -> None:
@@ -21,21 +25,25 @@ def main() -> None:
     settings = load_config(args.config)
     setup_logging(settings.logging)
     log = get_logger("system")
-    alert_log = get_logger("alerts")
     log.info("RDRS started | simulation_mode={}", settings.simulation_mode)
     if args.watch:
         settings.watch_folders = [args.watch]
 
     db = Database(settings.database_path)
     engine = DetectionEngine(settings.detection)
-    last_signals: set[str] = set()
+    responder = ResponseEngine(db, settings.quarantine_dir, settings.simulation_mode,
+                               window_seconds=settings.detection.window_seconds)
+    state = {"signals": set(), "processes": []}
 
     # Imported here so config/logging work even if a library is missing
     from app.detectors.file_monitor import start_monitor
     from app.detectors.process_monitor import ProcessMonitor
 
+    def on_processes(timestamp: str, rows: list) -> None:
+        db.save_processes(timestamp, rows)
+        state["processes"] = rows
+
     def on_event(ev: FileEvent) -> None:
-        nonlocal last_signals
         # Entropy only makes sense for files that were written or renamed
         if ev.event_type in ("created", "modified"):
             ev.entropy = file_entropy(ev.path, settings.entropy.sample_bytes)
@@ -44,18 +52,19 @@ def main() -> None:
         db.save_event(ev)
 
         engine.add_event(ev)
-        signals = engine.signals()
-        if signals != last_signals:          # only report when something changes
-            stats = engine.stats()
-            if signals:
-                alert_log.warning("SIGNALS: {} | {}", sorted(signals), stats)
-            else:
-                alert_log.info("Signals cleared | {}", stats)
-            last_signals = signals
-        # Phase 5 will turn these signals into a threat score and a response.
+        signals = set(engine.signals())
+        if any(p["cpu"] >= CPU_SPIKE_PERCENT for p in state["processes"]):
+            signals.add("cpu_spike")
+
+        if signals != state["signals"]:      # only react when something changes
+            state["signals"] = signals
+            score = calculate_score(signals, settings.weights)
+            level = classify(score, settings.levels)
+            suspect = state["processes"][0] if state["processes"] else None  # busiest process
+            responder.handle(score, level, signals, engine.stats(), suspect)
 
     observer, _handler = start_monitor(settings.watch_folders, on_event)
-    proc_monitor = ProcessMonitor(db.save_processes, interval=5.0)
+    proc_monitor = ProcessMonitor(on_processes, interval=5.0)
     proc_monitor.start()
 
     print(f"Monitoring {settings.watch_folders}  (press Ctrl+C to stop)")
@@ -69,7 +78,8 @@ def main() -> None:
         proc_monitor.stop()
         observer.stop()
         observer.join()
-        print(f"Saved {db.count('events')} events and {db.count('processes')} process rows to {settings.database_path}")
+        print(f"Saved {db.count('events')} events, {db.count('alerts')} alerts, "
+              f"{db.count('incidents')} incidents to {settings.database_path}")
         db.close()
 
 

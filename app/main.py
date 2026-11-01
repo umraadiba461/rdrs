@@ -41,7 +41,7 @@ def main() -> None:
 
     def on_processes(timestamp: str, rows: list) -> None:
         db.save_processes(timestamp, rows)
-        state["processes"] = rows
+        state["processes"] = [r for r in rows if r["pid"] != 0]
 
     def on_event(ev: FileEvent) -> None:
         # Entropy only makes sense for files that were written or renamed

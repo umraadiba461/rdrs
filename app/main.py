@@ -5,8 +5,10 @@ import argparse
 import time
 
 from app.core.config import load_config
+from app.core.entropy import file_entropy
 from app.core.logger import get_logger, setup_logging
 from app.core.models import FileEvent
+from app.database.db import Database
 
 
 def main() -> None:
@@ -22,14 +24,25 @@ def main() -> None:
     if args.watch:
         settings.watch_folders = [args.watch]
 
-    # Imported here so the config/logging work even if watchdog is missing
+    db = Database(settings.database_path)
+
+    # Imported here so config/logging work even if a library is missing
     from app.detectors.file_monitor import start_monitor
+    from app.detectors.process_monitor import ProcessMonitor
 
     def on_event(ev: FileEvent) -> None:
-        # Phase 3 will save to the database; Phase 4 will feed the detection engine.
-        pass
+        # Entropy only makes sense for files that were written or renamed
+        if ev.event_type in ("created", "modified"):
+            ev.entropy = file_entropy(ev.path, settings.entropy.sample_bytes)
+        elif ev.event_type == "moved" and ev.dest_path:
+            ev.entropy = file_entropy(ev.dest_path, settings.entropy.sample_bytes)
+        db.save_event(ev)
+        # Phase 4 will also feed ev into the detection engine here.
 
     observer, _handler = start_monitor(settings.watch_folders, on_event)
+    proc_monitor = ProcessMonitor(db.save_processes, interval=5.0)
+    proc_monitor.start()
+
     print(f"Monitoring {settings.watch_folders}  (press Ctrl+C to stop)")
     try:
         while True:
@@ -38,8 +51,11 @@ def main() -> None:
         print("\nStopping...")
         log.info("RDRS stopped by user")
     finally:
+        proc_monitor.stop()
         observer.stop()
         observer.join()
+        print(f"Saved {db.count('events')} events and {db.count('processes')} process rows to {settings.database_path}")
+        db.close()
 
 
 if __name__ == "__main__":

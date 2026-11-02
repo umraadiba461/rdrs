@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RDRS Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root { --bg:#0f172a; --card:#1e293b; --line:#334155; --text:#e2e8f0; --muted:#94a3b8;
+          --ok:#22c55e; --warn:#f59e0b; --crit:#ef4444; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, Segoe UI, Arial, sans-serif; background:var(--bg); color:var(--text); }
+  header { display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding:14px 20px; border-bottom:1px solid var(--line); }
+  header h1 { font-size:20px; margin:0; flex:1; }
+  .badge { padding:3px 10px; border-radius:999px; font-size:12px; background:var(--line); }
+  .badge.sim { background:#1d4ed8; }
+  .muted { color:var(--muted); font-size:13px; }
+  #offline { background:var(--crit); color:#fff; text-align:center; padding:8px; }
+  main { padding:16px 20px; max-width:1300px; margin:auto; display:grid; gap:16px; }
+  .grid4 { display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap:16px; }
+  .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+  @media (max-width: 900px) { .grid4, .grid2 { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .grid4, .grid2 { grid-template-columns: 1fr; } }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; min-width:0; }
+  .card h2 { font-size:15px; margin:0 0 10px; color:var(--muted); font-weight:600; }
+  .label { color:var(--muted); font-size:13px; }
+  .big { font-size:34px; font-weight:700; margin-top:6px; }
+  .threat .level { font-size:40px; font-weight:800; margin:4px 0; }
+  .threat.normal   { border-color:var(--ok);   } .threat.normal   .level { color:var(--ok); }
+  .threat.warning  { border-color:var(--warn); } .threat.warning  .level { color:var(--warn); }
+  .threat.critical { border-color:var(--crit); } .threat.critical .level { color:var(--crit); }
+  .chips { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; min-height:24px; }
+  .chip { background:var(--line); padding:2px 9px; border-radius:999px; font-size:12px; }
+  .scroll { overflow:auto; max-height:260px; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  td.wide { white-space:normal; word-break:break-word; min-width:220px; }
+  th { color:var(--muted); font-weight:600; position:sticky; top:0; background:var(--card); }
+  .lv-Critical { color:var(--crit); font-weight:700; } .lv-Warning { color:var(--warn); font-weight:700; }
+  .lv-Normal { color:var(--ok); }
+  button { background:#2563eb; color:#fff; border:0; border-radius:8px; padding:8px 14px; cursor:pointer; font-size:14px; }
+  button:disabled { opacity:.6; cursor:wait; }
+  canvas { max-height:240px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>RDRS &mdash; Ransomware Detection &amp; Response</h1>
+  <span id="mode" class="badge">...</span>
+  <span id="updated" class="muted">connecting...</span>
+</header>
+<div id="offline" hidden>Cannot reach the API. Is uvicorn still running?</div>
+
+<main>
+  <section class="grid4">
+    <div id="threat" class="card threat normal">
+      <div class="label">Threat level</div>
+      <div id="level" class="level">-</div>
+      <div><span id="score">0</span> / 100</div>
+      <div id="signals" class="chips"></div>
+    </div>
+    <div class="card"><div class="label">File events</div><div id="n-events" class="big">0</div></div>
+    <div class="card"><div class="label">Alerts</div><div id="n-alerts" class="big">0</div></div>
+    <div class="card"><div class="label">Incidents</div><div id="n-incidents" class="big">0</div></div>
+  </section>
+
+  <section class="grid2">
+    <div class="card"><h2>Threat score over time</h2><canvas id="chart-score"></canvas></div>
+    <div class="card"><h2>Entropy of recent files (7.5+ looks encrypted)</h2><canvas id="chart-entropy"></canvas></div>
+  </section>
+
+  <section class="card"><h2>Incidents</h2><div class="scroll"><table id="t-incidents"></table></div></section>
+  <section class="card"><h2>Recent alerts</h2><div class="scroll"><table id="t-alerts"></table></div></section>
+  <section class="card"><h2>Recent file events</h2><div class="scroll"><table id="t-events"></table></div></section>
+
+  <section class="card">
+    <h2>One-time scan of the watched folders</h2>
+    <button id="scan">Scan now</button>
+    <div id="scan-result" class="muted" style="margin-top:10px"></div>
+  </section>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+async function api(path, opts) {
+  const res = await fetch(path, opts);
+  if (!res.ok) throw new Error(path + " -> " + res.status);
+  return res.json();
+}
+
+// File names and messages come from the monitored disk, so they are NEVER inserted
+// as HTML markup. textContent keeps a malicious file name from running as code.
+function cell(text, cls) {
+  const td = document.createElement("td");
+  td.textContent = text == null ? "" : String(text);
+  if (cls) td.className = cls;
+  return td;
+}
+function fillTable(id, headers, rows) {
+  const table = $(id);
+  table.replaceChildren();
+  const head = table.createTHead().insertRow();
+  headers.forEach((h) => { const th = document.createElement("th"); th.textContent = h; head.appendChild(th); });
+  const body = table.createTBody();
+  if (!rows.length) {
+    const td = body.insertRow().insertCell();
+    td.colSpan = headers.length; td.className = "muted"; td.textContent = "Nothing yet";
+    return;
+  }
+  rows.forEach((cells) => { const tr = body.insertRow(); cells.forEach((c) => tr.appendChild(c)); });
+}
+const timeOf = (ts) => (ts ? new Date(ts).toLocaleTimeString() : "");
+const baseName = (p) => String(p).split(/[\\/]/).pop();
+
+Chart.defaults.color = "#94a3b8";
+Chart.defaults.borderColor = "#334155";
+const scoreChart = new Chart($("chart-score"), {
+  type: "line",
+  data: { labels: [], datasets: [{ label: "Threat score", data: [], borderColor: "#ef4444",
+                                     backgroundColor: "rgba(239,68,68,.15)", fill: true, tension: 0.3 }] },
+  options: { animation: false, scales: { y: { min: 0, max: 100 } } },
+});
+const entropyChart = new Chart($("chart-entropy"), {
+  type: "line",
+  data: { labels: [], datasets: [{ label: "Entropy", data: [], borderColor: "#38bdf8", tension: 0.3 }] },
+  options: { animation: false, scales: { y: { min: 0, max: 8 } } },
+});
+
+function render(status, alerts, events, incidents, scores) {
+  $("mode").textContent = status.simulation_mode ? "SIMULATION MODE" : "LIVE MODE";
+  $("mode").className = "badge" + (status.simulation_mode ? " sim" : "");
+  $("level").textContent = status.level;
+  $("score").textContent = status.score;
+  $("threat").className = "card threat " + status.level.toLowerCase();
+  $("signals").replaceChildren(...status.signals.map((s) => {
+    const span = document.createElement("span"); span.className = "chip"; span.textContent = s; return span;
+  }));
+  $("n-events").textContent = status.totals.events;
+  $("n-alerts").textContent = status.totals.alerts;
+  $("n-incidents").textContent = status.totals.incidents;
+
+  fillTable("t-incidents", ["#", "Time", "Score", "Suspect process", "Files", "Status"],
+    incidents.map((i) => {
+      let count = 0;
+      try { count = JSON.parse(i.affected_files).length; } catch (e) { /* leave 0 */ }
+      return [cell(i.id), cell(timeOf(i.timestamp)), cell(i.score), cell(i.suspect_process), cell(count), cell(i.status)];
+    }));
+  fillTable("t-alerts", ["Time", "Level", "Score", "Details"],
+    alerts.map((a) => [cell(timeOf(a.timestamp)), cell(a.level, "lv-" + a.level), cell(a.score), cell(a.message, "wide")]));
+  fillTable("t-events", ["Time", "Type", "File", "Entropy"],
+    events.slice(0, 30).map((e) => [cell(timeOf(e.timestamp)), cell(e.event_type), cell(baseName(e.dest_path || e.path)),
+                                    cell(e.entropy == null ? "" : Number(e.entropy).toFixed(2))]));
+
+  const s = scores.slice().reverse();                      // API returns newest first
+  scoreChart.data.labels = s.map((r) => timeOf(r.timestamp));
+  scoreChart.data.datasets[0].data = s.map((r) => r.score);
+  scoreChart.update();
+  const e = events.filter((r) => r.entropy != null).slice(0, 40).reverse();
+  entropyChart.data.labels = e.map((r) => baseName(r.dest_path || r.path));
+  entropyChart.data.datasets[0].data = e.map((r) => r.entropy);
+  entropyChart.update();
+}
+
+async function refresh() {
+  try {
+    const [status, alerts, events, incidents, scores] = await Promise.all([
+      api("/status"), api("/alerts?limit=20"), api("/events?limit=60"),
+      api("/incidents?limit=10"), api("/scores?limit=40"),
+    ]);
+    render(status, alerts, events, incidents, scores);
+    $("updated").textContent = "Updated " + new Date().toLocaleTimeString();
+    $("offline").hidden = true;
+  } catch (err) {
+    $("offline").hidden = false;
+  }
+}
+
+$("scan").addEventListener("click", async () => {
+  const btn = $("scan"), out = $("scan-result");
+  btn.disabled = true; out.textContent = "Scanning...";
+  try {
+    const r = await api("/scan", { method: "POST" });
+    out.textContent = r.files_scanned + " files scanned, " + r.suspicious_count + " look encrypted.";
+    r.suspicious.slice(0, 10).forEach((f) => {
+      const line = document.createElement("div");
+      line.textContent = baseName(f.path) + "  (entropy " + f.entropy + ")";
+      out.appendChild(line);
+    });
+  } catch (err) { out.textContent = "Scan failed: " + err.message; }
+  btn.disabled = false;
+});
+
+refresh();
+setInterval(refresh, 3000);
+</script>
+</body>
+</html>

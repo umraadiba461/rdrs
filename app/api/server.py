@@ -1,9 +1,12 @@
-"""REST API (FR-9). Run with:  uvicorn app.api.server:app"""
+"""REST API + dashboard (FR-9, FR-10). Run with:  uvicorn app.api.server:app"""
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from app.api import service
@@ -12,6 +15,7 @@ from app.database.db import Database
 
 CONFIG_PATH = "config.yaml"
 REPORTS_DIR = "data/reports"
+DASHBOARD_DIR = Path(__file__).resolve().parent.parent / "dashboard"
 
 settings = load_config(CONFIG_PATH)
 db = Database(settings.database_path)
@@ -25,6 +29,11 @@ class DetectionUpdate(BaseModel):
     renames_threshold: Optional[int] = None
     extension_changes_threshold: Optional[int] = None
     avg_entropy_threshold: Optional[float] = None
+
+
+@app.get("/", include_in_schema=False)
+def home():
+    return RedirectResponse("/dashboard/")
 
 
 @app.get("/health")
@@ -52,6 +61,11 @@ def incidents(limit: int = Query(50, ge=1, le=500)):
     return service.get_recent(db, "incidents", limit)
 
 
+@app.get("/scores")
+def scores(limit: int = Query(50, ge=1, le=500)):
+    return service.get_recent(db, "scores", limit)
+
+
 @app.get("/reports")
 def reports():
     return service.list_reports(REPORTS_DIR)
@@ -77,3 +91,7 @@ def change_settings(update: DetectionUpdate):
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc))
     return {"saved": new_values, "note": "Restart the monitor for the change to take effect"}
+
+
+# Must come last, after all the API routes
+app.mount("/dashboard", StaticFiles(directory=str(DASHBOARD_DIR), html=True), name="dashboard")

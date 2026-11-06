@@ -1,0 +1,1272 @@
+{
+  "incident_id": 1,
+  "generated_at": "2026-11-02T19:29:06",
+  "detected_at": "2026-11-01T20:05:16.753790",
+  "threat_score": 80,
+  "status": "open",
+  "simulation_mode": true,
+  "signals": [
+    "cpu_spike",
+    "high_entropy",
+    "rapid_encryption"
+  ],
+  "suspect_process": "System Idle Process (pid 0)",
+  "affected_file_count": 40,
+  "quarantine_folder": "data\\quarantine\\incident_1",
+  "affected_files": [
+    {
+      "file": "./data/sandbox\\f27.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f20.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f40.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f19.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f39.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f18.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f38.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f37.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f36.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f17.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f16.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f35.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f34.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f33.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f32.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f15.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f31.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f30.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f29.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f28.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f26.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f14.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f13.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f25.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f24.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f23.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f22.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f12.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f21.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f11.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f10.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f9.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f8.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f7.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f6.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f5.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f4.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f3.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f2.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\f1.bin",
+      "entropy": 7.99,
+      "quarantined": true
+    }
+  ],
+  "timeline": [
+    {
+      "time": "2026-11-01T20:05:15.048665",
+      "event": "created",
+      "file": "./data/sandbox\\f1.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.048665",
+      "event": "created",
+      "file": "./data/sandbox\\f1.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.085714",
+      "event": "modified",
+      "file": "./data/sandbox\\f1.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.105131",
+      "event": "created",
+      "file": "./data/sandbox\\f2.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.115844",
+      "event": "modified",
+      "file": "./data/sandbox\\f2.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.120416",
+      "event": "created",
+      "file": "./data/sandbox\\f3.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.132845",
+      "event": "modified",
+      "file": "./data/sandbox\\f3.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.140706",
+      "event": "created",
+      "file": "./data/sandbox\\f4.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.150484",
+      "event": "modified",
+      "file": "./data/sandbox\\f4.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.154501",
+      "event": "created",
+      "file": "./data/sandbox\\f5.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.048665",
+      "event": "created",
+      "file": "./data/sandbox\\f1.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.169101",
+      "event": "modified",
+      "file": "./data/sandbox\\f1.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.177347",
+      "event": "created",
+      "file": "./data/sandbox\\f2.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.186789",
+      "event": "modified",
+      "file": "./data/sandbox\\f2.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.095955",
+      "event": "modified",
+      "file": "./data/sandbox\\f1.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.212706",
+      "event": "created",
+      "file": "./data/sandbox\\f2.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.220242",
+      "event": "modified",
+      "file": "./data/sandbox\\f2.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.228296",
+      "event": "created",
+      "file": "./data/sandbox\\f3.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.165876",
+      "event": "modified",
+      "file": "./data/sandbox\\f5.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.251353",
+      "event": "created",
+      "file": "./data/sandbox\\f6.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.260862",
+      "event": "modified",
+      "file": "./data/sandbox\\f6.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.267855",
+      "event": "created",
+      "file": "./data/sandbox\\f7.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.270194",
+      "event": "modified",
+      "file": "./data/sandbox\\f7.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.194321",
+      "event": "created",
+      "file": "./data/sandbox\\f3.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.285422",
+      "event": "modified",
+      "file": "./data/sandbox\\f3.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.292826",
+      "event": "created",
+      "file": "./data/sandbox\\f4.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.236080",
+      "event": "modified",
+      "file": "./data/sandbox\\f3.bin",
+      "entropy": 7.991057381115791
+    },
+    {
+      "time": "2026-11-01T20:05:15.311376",
+      "event": "created",
+      "file": "./data/sandbox\\f4.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.317218",
+      "event": "modified",
+      "file": "./data/sandbox\\f4.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.301171",
+      "event": "modified",
+      "file": "./data/sandbox\\f4.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.334067",
+      "event": "created",
+      "file": "./data/sandbox\\f5.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.339819",
+      "event": "modified",
+      "file": "./data/sandbox\\f5.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.348863",
+      "event": "created",
+      "file": "./data/sandbox\\f6.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.356867",
+      "event": "modified",
+      "file": "./data/sandbox\\f6.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.323732",
+      "event": "created",
+      "file": "./data/sandbox\\f5.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.367424",
+      "event": "modified",
+      "file": "./data/sandbox\\f5.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.365079",
+      "event": "created",
+      "file": "./data/sandbox\\f7.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.380190",
+      "event": "created",
+      "file": "./data/sandbox\\f6.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.395810",
+      "event": "modified",
+      "file": "./data/sandbox\\f6.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.402876",
+      "event": "created",
+      "file": "./data/sandbox\\f7.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.412287",
+      "event": "modified",
+      "file": "./data/sandbox\\f7.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.437399",
+      "event": "created",
+      "file": "./data/sandbox\\f8.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.443584",
+      "event": "modified",
+      "file": "./data/sandbox\\f8.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.453804",
+      "event": "created",
+      "file": "./data/sandbox\\f9.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.389549",
+      "event": "modified",
+      "file": "./data/sandbox\\f7.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.470909",
+      "event": "created",
+      "file": "./data/sandbox\\f8.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.475564",
+      "event": "modified",
+      "file": "./data/sandbox\\f8.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.488427",
+      "event": "created",
+      "file": "./data/sandbox\\f9.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.496573",
+      "event": "modified",
+      "file": "./data/sandbox\\f9.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.506972",
+      "event": "created",
+      "file": "./data/sandbox\\f10.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.516139",
+      "event": "modified",
+      "file": "./data/sandbox\\f10.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.524500",
+      "event": "created",
+      "file": "./data/sandbox\\f11.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.533784",
+      "event": "modified",
+      "file": "./data/sandbox\\f11.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.543071",
+      "event": "created",
+      "file": "./data/sandbox\\f12.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.550660",
+      "event": "modified",
+      "file": "./data/sandbox\\f12.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.559634",
+      "event": "created",
+      "file": "./data/sandbox\\f13.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.568150",
+      "event": "modified",
+      "file": "./data/sandbox\\f13.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.577436",
+      "event": "created",
+      "file": "./data/sandbox\\f14.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.588543",
+      "event": "modified",
+      "file": "./data/sandbox\\f14.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.599069",
+      "event": "created",
+      "file": "./data/sandbox\\f15.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.609648",
+      "event": "modified",
+      "file": "./data/sandbox\\f15.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.619401",
+      "event": "created",
+      "file": "./data/sandbox\\f16.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.461850",
+      "event": "modified",
+      "file": "./data/sandbox\\f9.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.282216",
+      "event": "created",
+      "file": "./data/sandbox\\f8.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.653846",
+      "event": "modified",
+      "file": "./data/sandbox\\f16.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.692863",
+      "event": "modified",
+      "file": "./data/sandbox\\f8.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.673127",
+      "event": "created",
+      "file": "./data/sandbox\\f10.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.731776",
+      "event": "modified",
+      "file": "./data/sandbox\\f10.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.715037",
+      "event": "created",
+      "file": "./data/sandbox\\f17.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.762192",
+      "event": "modified",
+      "file": "./data/sandbox\\f17.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.710849",
+      "event": "created",
+      "file": "./data/sandbox\\f9.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.755409",
+      "event": "created",
+      "file": "./data/sandbox\\f11.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.802538",
+      "event": "modified",
+      "file": "./data/sandbox\\f11.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.809817",
+      "event": "created",
+      "file": "./data/sandbox\\f12.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.814727",
+      "event": "modified",
+      "file": "./data/sandbox\\f12.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.822638",
+      "event": "created",
+      "file": "./data/sandbox\\f13.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.832916",
+      "event": "modified",
+      "file": "./data/sandbox\\f13.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.838767",
+      "event": "created",
+      "file": "./data/sandbox\\f14.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.846850",
+      "event": "modified",
+      "file": "./data/sandbox\\f14.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.853758",
+      "event": "created",
+      "file": "./data/sandbox\\f15.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.781934",
+      "event": "modified",
+      "file": "./data/sandbox\\f9.bin",
+      "entropy": 7.991579341930572
+    },
+    {
+      "time": "2026-11-01T20:05:15.868118",
+      "event": "created",
+      "file": "./data/sandbox\\f10.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.855261",
+      "event": "modified",
+      "file": "./data/sandbox\\f15.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.884003",
+      "event": "created",
+      "file": "./data/sandbox\\f16.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.891519",
+      "event": "modified",
+      "file": "./data/sandbox\\f16.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.900036",
+      "event": "created",
+      "file": "./data/sandbox\\f17.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.922680",
+      "event": "modified",
+      "file": "./data/sandbox\\f17.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.928153",
+      "event": "created",
+      "file": "./data/sandbox\\f18.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.938206",
+      "event": "modified",
+      "file": "./data/sandbox\\f18.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.947575",
+      "event": "created",
+      "file": "./data/sandbox\\f19.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.955150",
+      "event": "modified",
+      "file": "./data/sandbox\\f19.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.963494",
+      "event": "created",
+      "file": "./data/sandbox\\f20.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.973201",
+      "event": "modified",
+      "file": "./data/sandbox\\f20.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.986156",
+      "event": "created",
+      "file": "./data/sandbox\\f21.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.877297",
+      "event": "modified",
+      "file": "./data/sandbox\\f10.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.004218",
+      "event": "created",
+      "file": "./data/sandbox\\f11.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:15.772186",
+      "event": "created",
+      "file": "./data/sandbox\\f18.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.020217",
+      "event": "modified",
+      "file": "./data/sandbox\\f18.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:15.988148",
+      "event": "modified",
+      "file": "./data/sandbox\\f21.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.027908",
+      "event": "created",
+      "file": "./data/sandbox\\f19.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.041977",
+      "event": "modified",
+      "file": "./data/sandbox\\f19.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.049308",
+      "event": "created",
+      "file": "./data/sandbox\\f20.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.013411",
+      "event": "modified",
+      "file": "./data/sandbox\\f11.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.066125",
+      "event": "created",
+      "file": "./data/sandbox\\f12.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.057019",
+      "event": "modified",
+      "file": "./data/sandbox\\f20.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.088862",
+      "event": "created",
+      "file": "./data/sandbox\\f21.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.091668",
+      "event": "modified",
+      "file": "./data/sandbox\\f21.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.072414",
+      "event": "modified",
+      "file": "./data/sandbox\\f12.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.037987",
+      "event": "created",
+      "file": "./data/sandbox\\f22.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.119380",
+      "event": "modified",
+      "file": "./data/sandbox\\f22.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.124961",
+      "event": "created",
+      "file": "./data/sandbox\\f23.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.135187",
+      "event": "modified",
+      "file": "./data/sandbox\\f23.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.104480",
+      "event": "created",
+      "file": "./data/sandbox\\f22.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.147519",
+      "event": "modified",
+      "file": "./data/sandbox\\f22.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.142246",
+      "event": "created",
+      "file": "./data/sandbox\\f24.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.160978",
+      "event": "modified",
+      "file": "./data/sandbox\\f24.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.168656",
+      "event": "created",
+      "file": "./data/sandbox\\f25.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.174584",
+      "event": "modified",
+      "file": "./data/sandbox\\f25.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.183180",
+      "event": "created",
+      "file": "./data/sandbox\\f26.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.190073",
+      "event": "modified",
+      "file": "./data/sandbox\\f26.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.197447",
+      "event": "created",
+      "file": "./data/sandbox\\f27.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.152096",
+      "event": "created",
+      "file": "./data/sandbox\\f23.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.209024",
+      "event": "modified",
+      "file": "./data/sandbox\\f23.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.215567",
+      "event": "created",
+      "file": "./data/sandbox\\f24.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.222239",
+      "event": "modified",
+      "file": "./data/sandbox\\f24.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.233282",
+      "event": "created",
+      "file": "./data/sandbox\\f25.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.240087",
+      "event": "modified",
+      "file": "./data/sandbox\\f25.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.240087",
+      "event": "created",
+      "file": "./data/sandbox\\f26.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.110833",
+      "event": "created",
+      "file": "./data/sandbox\\f13.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.256892",
+      "event": "modified",
+      "file": "./data/sandbox\\f13.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.265521",
+      "event": "created",
+      "file": "./data/sandbox\\f14.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.272389",
+      "event": "modified",
+      "file": "./data/sandbox\\f14.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.251287",
+      "event": "modified",
+      "file": "./data/sandbox\\f26.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.301513",
+      "event": "created",
+      "file": "./data/sandbox\\f27.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.309245",
+      "event": "modified",
+      "file": "./data/sandbox\\f27.bin",
+      "entropy": 7.991002324879051
+    },
+    {
+      "time": "2026-11-01T20:05:16.315770",
+      "event": "created",
+      "file": "./data/sandbox\\f28.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.325516",
+      "event": "modified",
+      "file": "./data/sandbox\\f28.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.332336",
+      "event": "created",
+      "file": "./data/sandbox\\f29.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.340268",
+      "event": "modified",
+      "file": "./data/sandbox\\f29.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.349160",
+      "event": "created",
+      "file": "./data/sandbox\\f30.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.354743",
+      "event": "modified",
+      "file": "./data/sandbox\\f30.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.366872",
+      "event": "created",
+      "file": "./data/sandbox\\f31.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.373672",
+      "event": "modified",
+      "file": "./data/sandbox\\f31.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.381156",
+      "event": "created",
+      "file": "./data/sandbox\\f32.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.280195",
+      "event": "created",
+      "file": "./data/sandbox\\f15.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.396187",
+      "event": "modified",
+      "file": "./data/sandbox\\f15.bin",
+      "entropy": 7.9910057915580035
+    },
+    {
+      "time": "2026-11-01T20:05:16.387858",
+      "event": "modified",
+      "file": "./data/sandbox\\f32.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.407544",
+      "event": "created",
+      "file": "./data/sandbox\\f33.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.416675",
+      "event": "modified",
+      "file": "./data/sandbox\\f33.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.424346",
+      "event": "created",
+      "file": "./data/sandbox\\f34.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.431974",
+      "event": "modified",
+      "file": "./data/sandbox\\f34.bin",
+      "entropy": 7.991733886641591
+    },
+    {
+      "time": "2026-11-01T20:05:16.510568",
+      "event": "created",
+      "file": "./data/sandbox\\f35.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.526352",
+      "event": "modified",
+      "file": "./data/sandbox\\f35.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.534661",
+      "event": "created",
+      "file": "./data/sandbox\\f36.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.400983",
+      "event": "created",
+      "file": "./data/sandbox\\f16.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.561385",
+      "event": "modified",
+      "file": "./data/sandbox\\f16.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.567060",
+      "event": "created",
+      "file": "./data/sandbox\\f17.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.579662",
+      "event": "modified",
+      "file": "./data/sandbox\\f17.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.539496",
+      "event": "modified",
+      "file": "./data/sandbox\\f36.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.595332",
+      "event": "created",
+      "file": "./data/sandbox\\f37.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.620168",
+      "event": "modified",
+      "file": "./data/sandbox\\f37.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.624782",
+      "event": "created",
+      "file": "./data/sandbox\\f38.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.636583",
+      "event": "modified",
+      "file": "./data/sandbox\\f38.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.644955",
+      "event": "created",
+      "file": "./data/sandbox\\f39.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.588034",
+      "event": "created",
+      "file": "./data/sandbox\\f18.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.661769",
+      "event": "modified",
+      "file": "./data/sandbox\\f18.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.650350",
+      "event": "modified",
+      "file": "./data/sandbox\\f39.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.677275",
+      "event": "created",
+      "file": "./data/sandbox\\f40.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.670574",
+      "event": "created",
+      "file": "./data/sandbox\\f19.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.709943",
+      "event": "modified",
+      "file": "./data/sandbox\\f19.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.685473",
+      "event": "modified",
+      "file": "./data/sandbox\\f40.bin",
+      "entropy": 7.990949267696879
+    },
+    {
+      "time": "2026-11-01T20:05:16.718703",
+      "event": "created",
+      "file": "./data/sandbox\\f20.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.743836",
+      "event": "modified",
+      "file": "./data/sandbox\\f20.bin",
+      "entropy": 7.991096868504932
+    },
+    {
+      "time": "2026-11-01T20:05:16.202348",
+      "event": "modified",
+      "file": "./data/sandbox\\f27.bin",
+      "entropy": 7.991002324879051
+    }
+  ],
+  "recommendations": [
+    "Disconnect the affected computer from the network (unplug the cable / turn off Wi-Fi) so the activity cannot spread.",
+    "Do NOT pay any ransom. Report the incident to your security team.",
+    "Keep the quarantine copies for evidence; they are copies, the originals were not changed.",
+    "Files were rewritten with random-looking data. Restore them from a clean, offline backup after the cause is removed.",
+    "A process used unusually high CPU. Check it in Task Manager.",
+    "Investigate the suspect process: System Idle Process (pid 0). Confirm it is really the source before stopping it (it is the busiest process, which is a good hint but not proof)."
+  ]
+}

@@ -1,0 +1,877 @@
+{
+  "incident_id": 3,
+  "generated_at": "2026-11-07T17:25:56",
+  "detected_at": "2026-11-07T17:14:02.730075",
+  "threat_score": 95,
+  "status": "open",
+  "simulation_mode": true,
+  "signals": [
+    "high_entropy",
+    "mass_rename",
+    "rapid_encryption"
+  ],
+  "suspect_process": "Code.exe (pid 7084)",
+  "affected_file_count": 39,
+  "quarantine_folder": "data\\quarantine\\incident_3",
+  "affected_files": [
+    {
+      "file": "./data/sandbox\\sim_1794051841_15.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_14.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_13.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_12.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_11.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_10.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_9.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_8.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_7.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_6.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_5.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_4.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_3.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_2.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_1.locked",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_40.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_39.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_38.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_37.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_36.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_35.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_34.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_33.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_32.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_31.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_30.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_29.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_28.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_27.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_26.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_25.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_24.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_23.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_22.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_21.txt",
+      "entropy": 7.99,
+      "quarantined": true
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_20.txt",
+      "entropy": 7.99,
+      "quarantined": false
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_19.txt",
+      "entropy": 7.99,
+      "quarantined": false
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_18.txt",
+      "entropy": 7.99,
+      "quarantined": false
+    },
+    {
+      "file": "./data/sandbox\\sim_1794051841_17.txt",
+      "entropy": 7.99,
+      "quarantined": false
+    }
+  ],
+  "timeline": [
+    {
+      "time": "2026-11-07T17:14:01.476616",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_1.txt",
+      "entropy": 7.990462030227684
+    },
+    {
+      "time": "2026-11-07T17:14:01.489644",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_1.txt",
+      "entropy": 7.990462030227684
+    },
+    {
+      "time": "2026-11-07T17:14:01.499044",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_2.txt",
+      "entropy": 7.990590262070459
+    },
+    {
+      "time": "2026-11-07T17:14:01.503324",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_2.txt",
+      "entropy": 7.990590262070459
+    },
+    {
+      "time": "2026-11-07T17:14:01.520125",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_3.txt",
+      "entropy": 7.99221409153139
+    },
+    {
+      "time": "2026-11-07T17:14:01.525283",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_3.txt",
+      "entropy": 7.99221409153139
+    },
+    {
+      "time": "2026-11-07T17:14:01.542143",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_4.txt",
+      "entropy": 7.991316219449116
+    },
+    {
+      "time": "2026-11-07T17:14:01.550260",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_4.txt",
+      "entropy": 7.991316219449116
+    },
+    {
+      "time": "2026-11-07T17:14:01.564365",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_5.txt",
+      "entropy": 7.98938213826184
+    },
+    {
+      "time": "2026-11-07T17:14:01.570902",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_5.txt",
+      "entropy": 7.98938213826184
+    },
+    {
+      "time": "2026-11-07T17:14:01.591251",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_6.txt",
+      "entropy": 7.989575974668188
+    },
+    {
+      "time": "2026-11-07T17:14:01.600594",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_6.txt",
+      "entropy": 7.989575974668188
+    },
+    {
+      "time": "2026-11-07T17:14:01.607501",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_7.txt",
+      "entropy": 7.990009751099303
+    },
+    {
+      "time": "2026-11-07T17:14:01.617114",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_7.txt",
+      "entropy": 7.990009751099303
+    },
+    {
+      "time": "2026-11-07T17:14:01.629486",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_8.txt",
+      "entropy": 7.98985491862212
+    },
+    {
+      "time": "2026-11-07T17:14:01.638550",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_8.txt",
+      "entropy": 7.98985491862212
+    },
+    {
+      "time": "2026-11-07T17:14:01.650878",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_9.txt",
+      "entropy": 7.990776106918038
+    },
+    {
+      "time": "2026-11-07T17:14:01.658578",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_9.txt",
+      "entropy": 7.990776106918038
+    },
+    {
+      "time": "2026-11-07T17:14:01.672679",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_10.txt",
+      "entropy": 7.991549615196107
+    },
+    {
+      "time": "2026-11-07T17:14:01.678759",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_10.txt",
+      "entropy": 7.991549615196107
+    },
+    {
+      "time": "2026-11-07T17:14:01.693720",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_11.txt",
+      "entropy": 7.990679707940526
+    },
+    {
+      "time": "2026-11-07T17:14:01.703029",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_11.txt",
+      "entropy": 7.990679707940526
+    },
+    {
+      "time": "2026-11-07T17:14:01.716376",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_12.txt",
+      "entropy": 7.990194071263425
+    },
+    {
+      "time": "2026-11-07T17:14:01.723136",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_12.txt",
+      "entropy": 7.990194071263425
+    },
+    {
+      "time": "2026-11-07T17:14:01.738406",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_13.txt",
+      "entropy": 7.990926532630372
+    },
+    {
+      "time": "2026-11-07T17:14:01.743033",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_13.txt",
+      "entropy": 7.990926532630372
+    },
+    {
+      "time": "2026-11-07T17:14:01.759140",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_14.txt",
+      "entropy": 7.991274461094592
+    },
+    {
+      "time": "2026-11-07T17:14:01.765443",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_14.txt",
+      "entropy": 7.991274461094592
+    },
+    {
+      "time": "2026-11-07T17:14:01.781018",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_15.txt",
+      "entropy": 7.991272975694416
+    },
+    {
+      "time": "2026-11-07T17:14:01.790114",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_15.txt",
+      "entropy": 7.991272975694416
+    },
+    {
+      "time": "2026-11-07T17:14:01.803172",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_16.txt",
+      "entropy": 7.991815275196315
+    },
+    {
+      "time": "2026-11-07T17:14:01.810374",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_16.txt",
+      "entropy": 7.991815275196315
+    },
+    {
+      "time": "2026-11-07T17:14:01.850846",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_17.txt",
+      "entropy": 7.990843971301891
+    },
+    {
+      "time": "2026-11-07T17:14:01.888914",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_17.txt",
+      "entropy": 7.990843971301891
+    },
+    {
+      "time": "2026-11-07T17:14:01.899624",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_18.txt",
+      "entropy": 7.991979689351301
+    },
+    {
+      "time": "2026-11-07T17:14:01.918992",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_18.txt",
+      "entropy": 7.991979689351301
+    },
+    {
+      "time": "2026-11-07T17:14:01.926337",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_19.txt",
+      "entropy": 7.991152149161853
+    },
+    {
+      "time": "2026-11-07T17:14:01.933829",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_19.txt",
+      "entropy": 7.991152149161853
+    },
+    {
+      "time": "2026-11-07T17:14:01.942414",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_20.txt",
+      "entropy": 7.991123030550531
+    },
+    {
+      "time": "2026-11-07T17:14:01.945946",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_20.txt",
+      "entropy": 7.991123030550531
+    },
+    {
+      "time": "2026-11-07T17:14:01.970656",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_21.txt",
+      "entropy": 7.9902720104982015
+    },
+    {
+      "time": "2026-11-07T17:14:01.978895",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_21.txt",
+      "entropy": 7.9902720104982015
+    },
+    {
+      "time": "2026-11-07T17:14:01.987680",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_22.txt",
+      "entropy": 7.990039324016589
+    },
+    {
+      "time": "2026-11-07T17:14:01.995056",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_22.txt",
+      "entropy": 7.990039324016589
+    },
+    {
+      "time": "2026-11-07T17:14:02.003516",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_23.txt",
+      "entropy": 7.9895531880101345
+    },
+    {
+      "time": "2026-11-07T17:14:02.010961",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_23.txt",
+      "entropy": 7.9895531880101345
+    },
+    {
+      "time": "2026-11-07T17:14:02.020984",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_24.txt",
+      "entropy": 7.990499403627612
+    },
+    {
+      "time": "2026-11-07T17:14:02.028339",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_24.txt",
+      "entropy": 7.990499403627612
+    },
+    {
+      "time": "2026-11-07T17:14:02.041890",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_25.txt",
+      "entropy": 7.991992148668471
+    },
+    {
+      "time": "2026-11-07T17:14:02.047757",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_25.txt",
+      "entropy": 7.991992148668471
+    },
+    {
+      "time": "2026-11-07T17:14:02.063399",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_26.txt",
+      "entropy": 7.989402705560258
+    },
+    {
+      "time": "2026-11-07T17:14:02.072106",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_26.txt",
+      "entropy": 7.989402705560258
+    },
+    {
+      "time": "2026-11-07T17:14:02.085810",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_27.txt",
+      "entropy": 7.989578197922629
+    },
+    {
+      "time": "2026-11-07T17:14:02.094082",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_27.txt",
+      "entropy": 7.989578197922629
+    },
+    {
+      "time": "2026-11-07T17:14:02.106610",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_28.txt",
+      "entropy": 7.990008328097448
+    },
+    {
+      "time": "2026-11-07T17:14:02.111886",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_28.txt",
+      "entropy": 7.990008328097448
+    },
+    {
+      "time": "2026-11-07T17:14:02.128566",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_29.txt",
+      "entropy": 7.991439690259618
+    },
+    {
+      "time": "2026-11-07T17:14:02.138673",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_29.txt",
+      "entropy": 7.991439690259618
+    },
+    {
+      "time": "2026-11-07T17:14:02.150217",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_30.txt",
+      "entropy": 7.990126373436816
+    },
+    {
+      "time": "2026-11-07T17:14:02.159637",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_30.txt",
+      "entropy": 7.990126373436816
+    },
+    {
+      "time": "2026-11-07T17:14:02.172039",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_31.txt",
+      "entropy": 7.991057510965726
+    },
+    {
+      "time": "2026-11-07T17:14:02.181919",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_31.txt",
+      "entropy": 7.991057510965726
+    },
+    {
+      "time": "2026-11-07T17:14:02.194883",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_32.txt",
+      "entropy": 7.991557060187778
+    },
+    {
+      "time": "2026-11-07T17:14:02.201844",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_32.txt",
+      "entropy": 7.991557060187778
+    },
+    {
+      "time": "2026-11-07T17:14:02.215522",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_33.txt",
+      "entropy": 7.991448146889817
+    },
+    {
+      "time": "2026-11-07T17:14:02.223858",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_33.txt",
+      "entropy": 7.991448146889817
+    },
+    {
+      "time": "2026-11-07T17:14:02.239175",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_34.txt",
+      "entropy": 7.990958953960396
+    },
+    {
+      "time": "2026-11-07T17:14:02.246157",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_34.txt",
+      "entropy": 7.990958953960396
+    },
+    {
+      "time": "2026-11-07T17:14:02.263097",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_35.txt",
+      "entropy": 7.990696125719964
+    },
+    {
+      "time": "2026-11-07T17:14:02.271532",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_35.txt",
+      "entropy": 7.990696125719964
+    },
+    {
+      "time": "2026-11-07T17:14:02.284201",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_36.txt",
+      "entropy": 7.98998012963057
+    },
+    {
+      "time": "2026-11-07T17:14:02.294142",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_36.txt",
+      "entropy": 7.98998012963057
+    },
+    {
+      "time": "2026-11-07T17:14:02.306438",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_37.txt",
+      "entropy": 7.990881649269887
+    },
+    {
+      "time": "2026-11-07T17:14:02.315405",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_37.txt",
+      "entropy": 7.990881649269887
+    },
+    {
+      "time": "2026-11-07T17:14:02.327679",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_38.txt",
+      "entropy": 7.991793639587523
+    },
+    {
+      "time": "2026-11-07T17:14:02.336797",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_38.txt",
+      "entropy": 7.991793639587523
+    },
+    {
+      "time": "2026-11-07T17:14:02.349493",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_39.txt",
+      "entropy": 7.991174021898518
+    },
+    {
+      "time": "2026-11-07T17:14:02.361627",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_39.txt",
+      "entropy": 7.991174021898518
+    },
+    {
+      "time": "2026-11-07T17:14:02.376621",
+      "event": "created",
+      "file": "./data/sandbox\\sim_1794051841_40.txt",
+      "entropy": 7.990674243036951
+    },
+    {
+      "time": "2026-11-07T17:14:02.390131",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_40.txt",
+      "entropy": 7.990674243036951
+    },
+    {
+      "time": "2026-11-07T17:14:02.402239",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_1.locked",
+      "entropy": 7.990462030227684
+    },
+    {
+      "time": "2026-11-07T17:14:02.412569",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_1.locked",
+      "entropy": 7.990462030227684
+    },
+    {
+      "time": "2026-11-07T17:14:02.426790",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_2.locked",
+      "entropy": 7.990590262070459
+    },
+    {
+      "time": "2026-11-07T17:14:02.439860",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_2.locked",
+      "entropy": 7.990590262070459
+    },
+    {
+      "time": "2026-11-07T17:14:02.451484",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_3.locked",
+      "entropy": 7.99221409153139
+    },
+    {
+      "time": "2026-11-07T17:14:02.467105",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_3.locked",
+      "entropy": 7.99221409153139
+    },
+    {
+      "time": "2026-11-07T17:14:02.479659",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_4.locked",
+      "entropy": 7.991316219449116
+    },
+    {
+      "time": "2026-11-07T17:14:02.490847",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_4.locked",
+      "entropy": 7.991316219449116
+    },
+    {
+      "time": "2026-11-07T17:14:02.502344",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_5.locked",
+      "entropy": 7.98938213826184
+    },
+    {
+      "time": "2026-11-07T17:14:02.511857",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_5.locked",
+      "entropy": 7.98938213826184
+    },
+    {
+      "time": "2026-11-07T17:14:02.525623",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_6.locked",
+      "entropy": 7.989575974668188
+    },
+    {
+      "time": "2026-11-07T17:14:02.538243",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_6.locked",
+      "entropy": 7.989575974668188
+    },
+    {
+      "time": "2026-11-07T17:14:02.548177",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_7.locked",
+      "entropy": 7.990009751099303
+    },
+    {
+      "time": "2026-11-07T17:14:02.557672",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_7.locked",
+      "entropy": 7.990009751099303
+    },
+    {
+      "time": "2026-11-07T17:14:02.569014",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_8.locked",
+      "entropy": 7.98985491862212
+    },
+    {
+      "time": "2026-11-07T17:14:02.579831",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_8.locked",
+      "entropy": 7.98985491862212
+    },
+    {
+      "time": "2026-11-07T17:14:02.591620",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_9.locked",
+      "entropy": 7.990776106918038
+    },
+    {
+      "time": "2026-11-07T17:14:02.604350",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_9.locked",
+      "entropy": 7.990776106918038
+    },
+    {
+      "time": "2026-11-07T17:14:02.613087",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_10.locked",
+      "entropy": 7.991549615196107
+    },
+    {
+      "time": "2026-11-07T17:14:02.623724",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_10.locked",
+      "entropy": 7.991549615196107
+    },
+    {
+      "time": "2026-11-07T17:14:02.632743",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_11.locked",
+      "entropy": 7.990679707940526
+    },
+    {
+      "time": "2026-11-07T17:14:02.642972",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_11.locked",
+      "entropy": 7.990679707940526
+    },
+    {
+      "time": "2026-11-07T17:14:02.654443",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_12.locked",
+      "entropy": 7.990194071263425
+    },
+    {
+      "time": "2026-11-07T17:14:02.665969",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_12.locked",
+      "entropy": 7.990194071263425
+    },
+    {
+      "time": "2026-11-07T17:14:02.677717",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_13.locked",
+      "entropy": 7.990926532630372
+    },
+    {
+      "time": "2026-11-07T17:14:02.686204",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_13.locked",
+      "entropy": 7.990926532630372
+    },
+    {
+      "time": "2026-11-07T17:14:02.695038",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_14.locked",
+      "entropy": 7.991274461094592
+    },
+    {
+      "time": "2026-11-07T17:14:02.706390",
+      "event": "modified",
+      "file": "./data/sandbox\\sim_1794051841_14.locked",
+      "entropy": 7.991274461094592
+    },
+    {
+      "time": "2026-11-07T17:14:02.720181",
+      "event": "moved",
+      "file": "./data/sandbox\\sim_1794051841_15.locked",
+      "entropy": 7.991272975694416
+    }
+  ],
+  "recommendations": [
+    "Disconnect the affected computer from the network (unplug the cable / turn off Wi-Fi) so the activity cannot spread.",
+    "Do NOT pay any ransom. Report the incident to your security team.",
+    "Keep the quarantine copies for evidence; they are copies, the originals were not changed.",
+    "Files were rewritten with random-looking data. Restore them from a clean, offline backup after the cause is removed.",
+    "Many files changed extension. Look for a new extension (such as .locked) and for a ransom note in the affected folders.",
+    "Investigate the suspect process: Code.exe (pid 7084). Confirm it is really the source before stopping it (it is the busiest process, which is a good hint but not proof)."
+  ]
+}

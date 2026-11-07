@@ -1,0 +1,22 @@
+2026-11-01 19:38:14.629 | WARNING  | __main__:on_event:51 - SIGNALS: ['high_entropy'] | {'files_modified': 6, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 6, 'avg_entropy': 7.1}
+2026-11-01 19:38:15.372 | WARNING  | __main__:on_event:51 - SIGNALS: ['high_entropy', 'rapid_encryption'] | {'files_modified': 20, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 20, 'avg_entropy': 7.72}
+2026-11-01 19:38:23.446 | WARNING  | __main__:on_event:51 - SIGNALS: ['high_entropy', 'mass_rename', 'rapid_encryption'] | {'files_modified': 55, 'renames': 15, 'extension_changes': 15, 'entropy_samples': 56, 'avg_entropy': 7.89}
+2026-11-01 19:39:40.101 | INFO     | __main__:on_event:53 - Signals cleared | {'files_modified': 0, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 0, 'avg_entropy': 0.0}
+2026-11-01 20:05:15.085 | INFO     | app.detectors.response:handle:87 - Threat level Normal (score 15)
+2026-11-01 20:05:15.251 | WARNING  | app.detectors.response:handle:93 - Warning: score 40 | signals ['cpu_spike', 'high_entropy'] | {'files_modified': 5, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 5, 'avg_entropy': 7.99}
+2026-11-01 20:05:15.379 | WARNING  | __main__:on_event:51 - SIGNALS: ['high_entropy'] | {'files_modified': 5, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 5, 'avg_entropy': 7.99}
+2026-11-01 20:05:15.984 | WARNING  | __main__:on_event:51 - SIGNALS: ['high_entropy', 'rapid_encryption'] | {'files_modified': 20, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 20, 'avg_entropy': 7.99}
+2026-11-01 20:05:16.783 | CRITICAL | app.detectors.response:handle:97 - Critical: score 80 | signals ['cpu_spike', 'high_entropy', 'rapid_encryption'] | {'files_modified': 20, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 20, 'avg_entropy': 7.99}
+2026-11-01 20:05:27.683 | WARNING  | __main__:on_event:51 - SIGNALS: ['high_entropy', 'mass_rename', 'rapid_encryption'] | {'files_modified': 54, 'renames': 15, 'extension_changes': 15, 'entropy_samples': 55, 'avg_entropy': 7.99}
+2026-11-01 20:05:29.543 | CRITICAL | app.detectors.response:handle:97 - Critical: score 100 | signals ['cpu_spike', 'high_entropy', 'mass_rename', 'rapid_encryption'] | {'files_modified': 54, 'renames': 15, 'extension_changes': 15, 'entropy_samples': 55, 'avg_entropy': 7.99}
+2026-11-01 20:07:39.883 | INFO     | __main__:on_event:53 - Signals cleared | {'files_modified': 0, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 0, 'avg_entropy': 0.0}
+2026-11-01 20:07:40.436 | INFO     | app.detectors.response:handle:87 - Threat level Normal (score 15)
+2026-11-02 15:39:32.959 | INFO     | app.detectors.response:handle:87 - Threat level Normal (score 25)
+2026-11-02 15:39:33.239 | WARNING  | app.detectors.response:handle:93 - Warning: score 65 | signals ['high_entropy', 'rapid_encryption'] | {'files_modified': 20, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 20, 'avg_entropy': 7.99}
+2026-11-02 15:39:43.873 | CRITICAL | app.detectors.response:handle:97 - Critical: score 95 | signals ['high_entropy', 'mass_rename', 'rapid_encryption'] | {'files_modified': 54, 'renames': 15, 'extension_changes': 15, 'entropy_samples': 55, 'avg_entropy': 7.99}
+2026-11-02 15:47:41.819 | INFO     | app.detectors.response:handle:87 - Threat level Normal (score 0)
+2026-11-07 17:14:01.589 | INFO     | app.detectors.response:handle:87 - Threat level Normal (score 25)
+2026-11-07 17:14:01.969 | WARNING  | app.detectors.response:handle:93 - Warning: score 65 | signals ['high_entropy', 'rapid_encryption'] | {'files_modified': 20, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 20, 'avg_entropy': 7.99}
+2026-11-07 17:14:02.744 | CRITICAL | app.detectors.response:handle:97 - Critical: score 95 | signals ['high_entropy', 'mass_rename', 'rapid_encryption'] | {'files_modified': 54, 'renames': 15, 'extension_changes': 15, 'entropy_samples': 55, 'avg_entropy': 7.99}
+2026-11-07 17:25:14.622 | INFO     | app.detectors.response:handle:87 - Threat level Normal (score 25)
+2026-11-07 17:25:14.915 | WARNING  | app.detectors.response:handle:93 - Warning: score 65 | signals ['high_entropy', 'rapid_encryption'] | {'files_modified': 20, 'renames': 0, 'extension_changes': 0, 'entropy_samples': 20, 'avg_entropy': 7.99}

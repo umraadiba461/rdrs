@@ -1,0 +1,11 @@
+2026-11-01 20:05:16.922 | WARNING  | app.detectors.response:_terminate:71 - SIMULATION: would terminate System Idle Process (pid 0)
+2026-11-01 20:05:16.922 | WARNING  | app.detectors.response:handle:108 - Incident 1 opened | 40 files affected, 40 copied to quarantine | SIMULATION: would terminate System Idle Process (pid 0)
+2026-11-01 20:05:29.543 | INFO     | app.detectors.response:handle:99 - Critical alert inside cooldown: no new incident
+2026-11-02 15:39:43.919 | WARNING  | app.detectors.response:_terminate:71 - SIMULATION: would terminate python.exe (pid 9596)
+2026-11-02 15:39:43.919 | WARNING  | app.detectors.response:handle:108 - Incident 2 opened | 15 files affected, 15 copied to quarantine | SIMULATION: would terminate python.exe (pid 9596)
+2026-11-07 17:14:02.821 | WARNING  | app.detectors.response:_quarantine:63 - Could not quarantine ./data/sandbox\sim_1794051841_20.txt: [WinError 2] The system cannot find the file specified
+2026-11-07 17:14:02.824 | WARNING  | app.detectors.response:_quarantine:63 - Could not quarantine ./data/sandbox\sim_1794051841_19.txt: [WinError 2] The system cannot find the file specified
+2026-11-07 17:14:02.825 | WARNING  | app.detectors.response:_quarantine:63 - Could not quarantine ./data/sandbox\sim_1794051841_18.txt: [WinError 2] The system cannot find the file specified
+2026-11-07 17:14:02.825 | WARNING  | app.detectors.response:_quarantine:63 - Could not quarantine ./data/sandbox\sim_1794051841_17.txt: [WinError 2] The system cannot find the file specified
+2026-11-07 17:14:02.826 | WARNING  | app.detectors.response:_terminate:71 - SIMULATION: would terminate Code.exe (pid 7084)
+2026-11-07 17:14:02.826 | WARNING  | app.detectors.response:handle:108 - Incident 3 opened | 39 files affected, 35 copied to quarantine | SIMULATION: would terminate Code.exe (pid 7084)

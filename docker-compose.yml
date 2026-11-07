@@ -1,0 +1,19 @@
+services:
+  api:                      # REST API + dashboard on http://localhost:8000
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - rdrs-data:/app/data
+      - rdrs-logs:/app/logs
+
+  monitor:                  # watches /app/data/sandbox and responds to attacks
+    build: .
+    command: python -m app.main --watch ./data/sandbox
+    volumes:
+      - rdrs-data:/app/data
+      - rdrs-logs:/app/logs
+
+volumes:
+  rdrs-data:
+  rdrs-logs:
